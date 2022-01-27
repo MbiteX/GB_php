@@ -1,0 +1,285 @@
+.shop-cart {
+    // outline: 1px solid red;
+    margin-top: 96px;
+    display: flex;
+    justify-content: space-between;
+
+    &__card {
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 26px;
+        color: #575757;
+
+        &-item {
+            display: flex;
+            margin-bottom: 40px;
+            box-shadow: 7px 7px 10px rgb(224, 224, 224);
+
+            & > img {
+                padding-right: 30px;
+            }
+
+            & > div > h2 {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 29px;
+                color: #222222;
+                margin-bottom: 42px;
+            }
+
+            & > div > p {
+                margin-bottom: 6px;
+
+                & > span {
+                    color: $color-pink;
+                }
+            }
+
+            & > div {
+                margin-top: 22px;
+                width: 390px;
+                position: relative;
+            }
+
+            &_sht {
+                margin-left: 24px;
+                width: 64px;
+                border: 1px solid #EAEAEA;
+                font-weight: normal;
+                font-size: 22px;
+                line-height: 26px;
+                color: #575757;
+                padding-left: 10px;
+            }
+
+            & > div > button {
+                border: none;
+                background: #fff;
+                position: absolute;
+                right: 22px;
+                top: 6px;
+
+                transform:rotate(0deg);
+                transition: 0.4s;
+                &:hover {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    &__form {
+        width: 360px;
+
+        &-title{
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #222222;
+        }
+
+        &-adress {
+
+            & > input {
+                margin-top: 20px;
+                width: 100%;
+                height: 45px;
+                padding: 16px;
+                border: 1px solid #A4A4A4;
+
+                transition: 00.4s;
+                &:hover {
+                    border: 1px solid $color_pink;
+                }
+            }
+
+            & > button {
+                background: #FFFFFF;
+                border: 1px solid #A4A4A4;
+                font-weight: 300;
+                font-size: 11px;
+                line-height: 13px;
+                color: #4A4A4A;
+                padding: 12px 15px;
+                margin-top: 24px;
+                margin-bottom: 57px;
+
+                transition: 00.4s;
+                &:hover {
+                    background: $color_pink;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        &-total {
+            background: #F5F3F3;
+            padding: 42px;
+            display: flex;
+            flex-direction: column;
+            text-align: end;
+            font-size: 11px;
+            line-height: 13px;
+            color: #4A4A4A;
+
+            &-grand {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+                color: #222222;
+                padding-top: 12px;
+                padding-bottom: 21px;
+
+                & > span {
+                    color: $color-pink;
+                    font-weight: 700;
+                }
+            }
+
+            & > hr {
+                border: 1px solid #E2E2E2;
+            }
+
+            & > button {
+                background: $color-pink;
+                border: 1px solid $color-pink;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 17px;
+                color: #FFFFFF;
+                padding: 16px 40px;
+                margin-top: 17px;
+
+                transition: 00.4s;
+                &:hover {
+                    background: white;
+                    color: $color_pink;
+                }
+            }
+        }
+    }
+}
+
+.box-card-wrap {
+    display: flex;
+}
+
+.box-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop-cart__card-btm {
+    background: #FFFFFF;
+    border: 1px solid #A4A4A4;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    padding: 16px 40px;
+    margin-top: 72px;
+    margin-bottom: 128px;
+
+    transition: 00.4s;
+    &:hover {
+        background: $color_pink;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .shop-cart {
+        // outline: 1px solid red;
+        margin-top: 59px;
+        display: inline-block;
+
+        &__card {
+            
+            &-item {
+                & > div {
+                    width: 472px;
+                }
+            }
+        }
+        
+        &__form {
+            display: flex;
+
+            &-title {
+                width: 360px;
+            }
+
+            &-total {
+                padding: 40px;
+                height: 214px;
+                margin-top: 38px;
+                margin-left: 15px;
+
+                &-grand {
+                    width: 360px - 40px * 2;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .shop-cart__card-btm {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 9px 18px;
+        margin-top: 0;
+        margin-bottom: 0;
+    
+        transition: 00.4s;
+        &:hover {
+            background: $color_pink;
+            border-radius: 20px;
+        }
+    }
+
+    .shop-cart {
+        &__form {
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+        }
+
+        &__card {            
+        font-size: 14px;
+        line-height: 16px;
+
+            &-item {
+                & > img {  
+                    width: 143.86px + 5px;
+                    height: 188px;
+                    padding-right: 5px;
+                }
+                
+                & > div {
+                    width: 205px;
+                    // padding-right: 10px;
+
+                    & > h2 {
+                        width: 150px;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #222222;
+                        margin-bottom: 25px;
+                    }
+                }
+
+                &_sht {
+                    margin-left: 24px;
+                    width: 32px;
+                    font-size: 10px;
+                    line-height: 12px;
+                    color: #575757;
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+}

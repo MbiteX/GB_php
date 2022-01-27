@@ -1,0 +1,152 @@
+.register {
+
+    &__form {
+        width: 360px;
+        padding-top: 32px;
+
+        & > h2 {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #222222;
+            margin-top: 32px;
+        }  
+        
+        &-name {
+            width: 360px;
+            padding: 13px 0 16px 17px;
+            margin-top: 20px;
+
+            &_mb {
+                margin-bottom: 32px;
+            }
+        }
+
+        &-radio {
+            font-weight: 300;
+            font-size: 13px; 
+            line-height: 13px;
+            color: #000000;
+            margin-right: 20px;
+
+            &_pr {
+                margin-right: 10px;
+            }
+        }
+
+        & > p {
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 16px;
+            color: #B1B1B1;
+            margin-top: 15px;
+            margin-bottom: 39px;
+        }
+        
+        &-btn {
+            padding: 16px 29px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+            fill: #FFFFFF;
+            background: $color_pink;
+            border: 1px solid $color_pink;
+            margin-bottom: 96px;
+
+            & > svg {
+                margin-left: 20px;
+
+            }
+
+            transition: 0.4s;
+            &:hover {
+                color: $color_pink;
+                fill: $color_pink;
+                background: #fff;
+            }
+        }
+    }
+
+    &_wrap {
+        display: flex;
+        // justify-content: space-between;
+    }
+
+    &__info {
+        padding-left: 128px;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+
+        & > h3 {
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            margin-top: 64px;
+        }
+
+        & > p {
+            padding: 22px 0;
+        }
+
+        & > ul {
+            list-style-type: none;
+
+            & > li {
+                padding-bottom: 16px;
+            }
+
+            & > li::before {
+                content: url(../../img/icon/ok.png);
+                padding-right: 23px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1150px) {
+    .register {
+        &__form {
+            padding-top: 8px;
+        }
+
+        &__info {
+            padding-left: 22px;
+            font-size: 16px;
+            line-height: 19px;
+
+            & > h3 {
+                font-size: 16px;
+                line-height: 19px;
+                margin-top: 40px;
+            }
+
+            & > ul {
+                margin-bottom: 84px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .register {
+        &_wrap {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__info {
+            width: 360px;
+            padding-left: 0;
+        }
+
+        &__form {
+            &-btn {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,133 @@
+.header {
+    background: #222;
+    padding: 20px;
+
+    &_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__icon {
+        fill: #e8e8e8;
+
+        transition: 0.4s;
+
+        &:hover {
+            fill: $color_pink;
+            transform: scale(1.25);
+        }
+    }
+}
+
+.red {
+    fill: $color_pink;
+}
+
+.search_icon {
+    margin-left: 41px;
+}
+
+.icon {
+    margin-left: 33px;
+}
+
+.logo_link {
+    transform: rotate(0deg);
+    
+    &:hover {
+        transition: 0.4s;
+        transform: rotate(-360deg);
+    }
+}
+
+.menu {
+    &__nav {
+        background-color: white;
+        box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.438);
+        min-width: 232px;
+        padding: 34px 10px 20px 34px;
+        position: absolute;
+        right: 0;
+        top: 80px;
+        transform: scalex(0);
+        transform-origin: right top;
+        transition: 0.5s;
+        z-index: 100;
+        
+        &-title {
+            margin-top: 0;
+            padding-bottom: 24px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+        }
+        
+        &-overlay {
+            position: relative;
+            // z-index: 100;
+        }
+
+        &-heading {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: $color_pink;
+        }
+
+        &-item {
+            padding-left: 20px;
+            list-style-type: none;
+            
+            &_link {
+                color: #6F6E6E;
+                text-decoration: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0);
+        
+                transition: 00.6s;
+                &:hover {
+                    border-bottom: 1px solid $color_pink;
+                }
+            }
+        }
+    }
+
+    &__btn-close {
+        position: absolute;
+        right: 6px;
+        top: -18px;
+    }
+
+    &__icon {
+        margin-bottom: 24px;
+        // outline: 1px solid red;
+        margin-left: -32px;
+    }
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked ~ .menu__nav {
+    transform: scalex(1);
+}
+
+    .header__icon-menu {
+    fill: $color_pink
+    }
+
+@media (min-width: 420px) {
+    .menu__icon {
+        display: none;
+    }
+}
+
+@media (max-width: 419px) {
+    .menu__icon-head {
+        display: none;
+    }
+}

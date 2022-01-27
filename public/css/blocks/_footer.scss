@@ -1,0 +1,46 @@
+.footer {
+    background: #222224;
+
+    &_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #FBFBFB;
+    }
+
+    &_social {
+        margin: 25px 0;
+    }
+}
+
+.icon-social {
+    padding: 10px;
+    background-color: white;
+    fill: black;  
+
+    transition: 0.4s;
+    &:hover {
+        background: $color_pink;
+        fill: white;
+    }
+}
+
+.icon-f {
+    padding: 10px 13px;
+}
+
+.icon-t {
+    padding: 10px 9px;
+}
+
+@media (max-width: 430px) {
+    .footer {
+        padding-top: 43px;
+        padding-bottom: 9px;
+    
+        &_wrap {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+}

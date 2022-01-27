@@ -1,0 +1,100 @@
+.feetback {
+    background: url(../img/subscribe_bg.png) 50% no-repeat;
+    background-size: cover;
+    background-position: 24%;
+}
+
+.subscrabe_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #222224;
+}
+        
+.comment {
+    width: 360px;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 97px;
+    margin-bottom: 126px;
+}
+
+.subscribe {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    
+    &_form {
+        display: flex;
+        margin-top: 32px;
+    }
+    
+    & > p > span {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 167.2%;
+        text-align: center;
+    }
+}
+
+.email {
+    border: none;
+    background: #E1E1E1;
+    border-top-left-radius: 26px;
+    border-bottom-left-radius: 26px;
+    padding: 20px;
+    width: 216px;
+    color: #222224;
+    opacity: 0.67;
+}
+
+.submit {
+    border: none;
+    background: $color_pink;
+    
+    border: 1px solid $color_pink;
+    border-top-right-radius: 26px;
+    border-bottom-right-radius: 26px;
+    padding:20px;
+    color: #FFFFFF;
+
+    transition: 0.4s;
+    
+    &:hover {
+        color: $color_pink;
+        background: white;
+        border: 1px solid $color_pink;
+    }
+}
+
+@media (max-width: 820px) {
+    .feetback {
+        padding-top: 54px;
+        padding-bottom: 140px;
+    }
+
+    .subscrabe_wrap {
+        display: block;
+        justify-content: center;
+    }
+    
+    .comment {
+        margin: 0 auto;
+        // margin-top: 54px;
+        margin-bottom: 48px;
+    }
+
+    .subscribe_form {
+        margin-top: 22px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .feetback {
+        padding-bottom: 109px;
+    }
+}
